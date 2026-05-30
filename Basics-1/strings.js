@@ -20,3 +20,5 @@ console.log(gameName.indexOf('N'))
 // Slicing
 const newName=gameName.substring(0,5)
 console.log(newName)
+
+
