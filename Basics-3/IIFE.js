@@ -10,5 +10,9 @@ chai();
 
 (function coffee(){
     console.log("CoffeeDB connected");
-})()
+})(); //semicolon is must to use to avoid any type of errors
 //in this format -- This is done to avoid the poluution caused by the global scope
+
+
+// arrow function declaration using iife
+((name)=>{console.log(`${name} connected`);})('vanilaDB')
