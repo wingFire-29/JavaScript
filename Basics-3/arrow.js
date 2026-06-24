@@ -41,4 +41,16 @@ function indra(){
 
 const addTwo = (num1,num2) => ({username:"Parag"})//this parenthesis is important while using objects
 
-console.log(addTwo(3,4));
+// console.log(addTwo(3,4));
+
+function one(){
+    const username = "Parag"
+    function two(){
+        const website = "Youtube"
+        console.log(username);
+    }
+    // console.log(website);
+    two()
+}
+// one()
+
