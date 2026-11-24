@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit/remove</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addlanguage("Python")
+    //same method and function but an optimised way to do it as it will traverse the whole tree 
+    
+    function optilanguage(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").
+        appendChild(li)
+    }  
+    optilanguage("C++")  
+    optilanguage("Java")  
+
+    //edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo" 
+    secondLang.replaceWith(newLi)
+
+    //2nd method edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+
+</script>
+</html>
